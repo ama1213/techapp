@@ -3,35 +3,14 @@
     = link_to "/" do
       .header__top__logo
         = image_tag "/images/logo.png", class:"logo"
-    #home.big-bg
-      %header.page-header.wrapper
-        %h1
-          %a
-            %img.logo{:alt => "SunadokeIホーム", :src => ""}/
-        %nav
-          %ul.main-nav
-            %li
-              %a SunadokeIとは？
-              %a.button{:href => "login.html"} ログイン
-      .home-content.wrapper
-        %h2.page-title Life Share　　　 　　『終活』
-        %p「後悔」を「公開」し「幸界」を創る。
+      = link_to "#" do
+        .header__top__logo__text
+          SunadokeIとは？
+        -# .header__top__logo__button
+        -#   .button{:href => "login.html"} ログイン
+  .header__main
+    .header__main__box
+      Life sharing 　　　 　『想続』
+      .header__main__box__min
+        「後悔」を「公開」し「幸界」を創る。
 
-
-
-
--# .head
--#   %body
--#     #home.big-bg
--#       %header.page-header.wrapper
--#         %h1
--#           %a
--#             %img.logo{:alt => "SunadokeIホーム", :src => "images/logo.png"}/
--#         %nav
--#           %ul.main-nav
--#             %li
--#               %a SunadokeIとは？
--#               %a.button{:href => "login.html"} ログイン
--#       .home-content.wrapper
--#         %h2.page-title Life Sharing　　　　　『終活』
--#         %p「後悔」を「公開」し「幸界」を創る。

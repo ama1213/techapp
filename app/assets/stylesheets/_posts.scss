@@ -1,77 +1,62 @@
-// * {
-//   box-sizing: border-box;
-//   text-decoration: none;
-//   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-// }
-
-header{
+.header{
+  background-image: url(/images/person-4700349_1920.jpg);
+  background-size: cover;
+  height: 100vh;
   width: 100vw;
-  height: 100px;
   &__top{
-    line-height: 1.7;
-    color: #956d30;
+    display: flex;
+    justify-content: space-between;
     &__logo{
-      max-width: 210px;
-      margin-top: 14px;
+      width: 100%;
+      .logo{
+        height: 100px;
+        width: 210px;
+        margin: 30px 50px 0px ;
+      }
+      &__text{
+        margin: 55px 50px 0px ;
+        font-size: 1.5rem;
+        color: #956d30;
+      }
+      // &__button{
+      //   font-size: 1.375rem;
+      //   background: #956d30;
+      //   color: #fff;
+      //   border-radius: 100px;
+      //   padding: 8px 32px;
+      // }
+    }
+  }
+}
+a{
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+  color: #956d30;
+}
+
+.header__main{
+  &__box{
+    margin: 0 auto;
+    color: #956d30;
+    font-size: 5.2rem;
+    text-align: center;
+    margin-top: 170px;
+    &__min{
+      margin: 0 auto;
+      color: #956d30;
+      font-size: 1.3rem;
+      margin-right: 600px;
     }
   }
 }
 
-a{
-  text-decoration: none;
-}
+// .button:hover{
+//   background: #deb887;
+// }
 
-.main-nav{
-  display: flex;
-  font-size: 1.25rem;
-  text-transform: uppercase;
-  margin-top: 34px;
-  list-style: none;
-}
 
-.page-header{
-  display: flex;
-  justify-content: space-between;
-}
-.wrapper{
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 0 4%;
-  color: #956d30
-}
-.home-content{
-  text-align: center;
-  margin-top: 10%;
-}
-.home-content p {
-  font-size: 1.125rem;
-  margin: 10px 600px 0 42px;
-}
-.page-title{
-  font-size: 5rem;
-  font-family: 'philosopher', serif;
-  text-transform: uppercase;
-  font-weight: normal;
-}
-.button{
-  font-size: 1.375rem;
-  background: #deb887;
-  color: #fff;
-  border-radius: 100px;
-  padding: 8px 32px;
-}
-.button:hover{
-  background: #deb887;
-}
-.big-bg{
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-}
-#home{
-  background-image: url(../images/person-4700349_1920.jpg);
-  min-height: 100vh;
-}
 
 /* news-------------------------------------- */
 
