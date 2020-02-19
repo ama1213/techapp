@@ -1,3 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
+
 .header{
   background-image: url(/images/person-4700349_1920.jpg);
   background-size: cover;
@@ -15,7 +20,7 @@
       }
       &__text{
         margin: 40px 130px 0px ;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         color: #956d30;
       }
       // &__button{
@@ -40,9 +45,9 @@ a:hover {
   &__box{
     margin: 0 auto;
     color: #956d30;
-    font-size: 5.2rem;
+    font-size: 4.8rem;
     text-align: center;
-    margin-top: 170px;
+    margin-top: 220px;
     font-family: 'philosopher', serif;
     font-weight: normal;
     &__min{

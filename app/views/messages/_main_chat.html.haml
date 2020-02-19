@@ -1,0 +1,23 @@
+.main
+  .chat-main__group
+    .chat-main__group__left
+      = @group.name
+      .chat-main__group__left__member
+        Menber :
+        - @group.users.each do |user|
+          = user.name
+    .chat-main__group__edit
+      = link_to edit_group_path(@group) do
+        Edit
+
+  .chat-main__message
+    = render @messages
+
+  .chat-main__form
+    = form_for [@group, @message] do |f|
+      .chat-main__form__comment
+        = f.text_field :content, class: 'chat-main__form__comment__text', placeholder: 'type a message'
+        = f.label :image, class: 'chat-main__form__comment__image' do
+          %i.fa.fa-image
+            = f.file_field :image
+      = f.submit "Send", class: "chat-main__form__submit"
