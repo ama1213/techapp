@@ -1,0 +1,337 @@
+// * {
+//   box-sizing: border-box;
+//   text-decoration: none;
+//   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+// }
+
+header{
+  width: 100vw;
+  height: 100px;
+  &__top{
+    line-height: 1.7;
+    color: #956d30;
+    &__logo{
+      max-width: 210px;
+      margin-top: 14px;
+    }
+  }
+}
+
+a{
+  text-decoration: none;
+}
+
+.main-nav{
+  display: flex;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  margin-top: 34px;
+  list-style: none;
+}
+
+.page-header{
+  display: flex;
+  justify-content: space-between;
+}
+.wrapper{
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 4%;
+  color: #956d30
+}
+.home-content{
+  text-align: center;
+  margin-top: 10%;
+}
+.home-content p {
+  font-size: 1.125rem;
+  margin: 10px 600px 0 42px;
+}
+.page-title{
+  font-size: 5rem;
+  font-family: 'philosopher', serif;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.button{
+  font-size: 1.375rem;
+  background: #deb887;
+  color: #fff;
+  border-radius: 100px;
+  padding: 8px 32px;
+}
+.button:hover{
+  background: #deb887;
+}
+.big-bg{
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+#home{
+  background-image: url(../images/person-4700349_1920.jpg);
+  min-height: 100vh;
+}
+
+/* news-------------------------------------- */
+
+// #news{
+//   background-image: url(../image/cactus-1842095_1920.jpg);
+//   height: 270px;
+//   margin-bottom: 40px;
+// }
+// .news-contents{
+//   display: flex;
+//   justify-content: space-between;
+//   margin-bottom: 50px;
+// }
+// article{
+//   width: 74%;
+// }
+// .post-info{
+//   position: relative;
+//   padding-top: 4px;
+//   margin-bottom: 40px;
+// }
+// .post-date{
+//   background: #deb887;
+//   border-radius: 50%;
+//   color: #fff;
+//   width: 100px;
+//   height: 100px;
+//   font-size: 1.625rem;
+//   text-align: center;
+//   position: absolute;
+//   top: 0;
+//   padding-top: 10px;
+// }
+// .post-date span{
+//   font-size: 1rem;
+//   border-top: 1px rgba(255, 255, 255, .5) solid;
+//   padding-top: 6px;
+//   display: block;
+//   width: 60%;
+//   margin: 0 auto;
+// }
+// .post-title{
+//   font-family: "Yu Mincho", "YuMincho", serif;
+//   font-size: 2rem;
+//   font-weight: normal;
+// }
+// .post-title,
+// .post-cat{
+//   margin-left: 120px;
+// }
+// article img{
+//   margin-bottom: 20px;
+// }
+// article p{
+//   margin-bottom: 1rem;
+// }
+
+// aside{
+//   width: 22%;
+// }
+// aside p{
+//   padding: 12px 10px;
+// }
+// .sub-menu{
+//   margin-bottom: 60px;
+//   list-style: none;
+// }
+// .sub-menu li{
+//   border-bottom: 1px #ddd solid;
+// }
+// .sub-menu a{
+//   color: #956d30;
+//   padding: 10px;
+//   display: block;
+// }
+// .sub-menu a:hover{
+//   color: #deb887;
+// }
+// .sub-title{
+//   font-size: 1.375rem;
+//   padding: 0 8px 8px;
+//   border-bottom: 2px #deb887 solid;
+//   font-weight: normal;
+// }
+
+// /* menu---------------------------------------- */
+// #menu{
+//   background-image: url(../image/palm-4211167_1920.jpg);
+//   min-height: 100vh;
+// }
+// .menu-content{
+//   max-width: 560px;
+//   margin-top: 10%;
+// }
+// .menu-content .page-title{
+//   text-align: center;
+// }
+// .menu-content p{
+//   font-size: 1.125rem;
+//   margin: 10px 0 0;
+// }
+// .grid{
+//   display: grid;
+//   gap: 26px;
+//   grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
+//   margin-top: 6%;
+//   margin-bottom: 50px;
+// }
+// footer{
+//   background: #deb887;
+//   text-align: center;
+//   padding: 26px 0;
+//   /* margin-top: 50px; */
+// }
+// footer p{
+//   color: #fff;
+//   font-size: 0.875rem;
+// }
+
+// /* contact-------------------------------------- */
+// #contact{
+//   background-image: url(../image/palm-4215881_1920.jpg);
+//   min-height: 100vh;
+// }
+
+// form div{
+//   margin-bottom: 14px;
+// }
+// label{
+//   font-size: 1.125rem;
+//   margin-bottom: 10px;
+//   display: block;
+// }
+// input[type="text"],
+// input[type="email"],
+// textarea{
+//   background: rgba(255, 255, 255, .5);
+//   border: 1px #fff solid;
+//   border-radius: 5px;
+//   padding: 10px;
+//   font-size: 1rem;
+// }
+// input[type="text"]
+// input[type="email"]{
+//   width:100%;
+//   max-width: 240px;
+// }
+// textarea{
+//   width: 100%;
+//   max-width: 480px;
+//   height: 6rem;
+// }
+// input[type="submit"]{
+//   border: none;
+//   cursor: pointer;
+//   line-height: 1;
+// }
+// #location{
+//   padding: 4% 0;
+// }
+// #location .wrapper{
+//   display: flex;
+//   justify-content: space-between;
+// }
+// .location-info{
+//   width: 22%;
+// }
+// .location-info p{
+//   padding: 12px 10px;
+// }
+// .location-map{
+//   width: 74%;
+// }
+// iframe{
+//   width: 100%;
+// }
+
+// #sns{
+//   background-image: url(../image/palm-4215880_1920.jpg);
+//   min-width: 100vh;
+//   padding: 4% 0;
+// }
+// #sns .wrapper{
+//   display: flex;
+//   justify-content: space-between;
+// }
+// #sns .sub-title{
+//   margin-bottom: 30px;
+// }
+// .sns-box{
+//   width: 30%;
+// }
+
+// /* モバイル版------------------------------------ */
+// @media (max-width:600px){
+//   /* TOP--------------- */
+//   .page-title{
+//     font-size: 2.5rem;
+//   }
+//   .main-nav{
+//     font-size: 1rem;
+//     margin-top: 10px;
+//   }
+//   .main-nav li{
+//     margin: 0 20px;
+//   }
+//   .home-content{
+//     margin-top: 20%;
+//   }
+//   .page-header{
+//     flex-direction: column;
+//     align-items: center;
+//   }
+//   /* NEWS--------------- */
+//   .news-contents{
+//     flex-direction: column;
+//   }
+//   article,
+//   aside{
+//     width: 100%;
+//   }
+//   #news .page-title{
+//     margin-top: 30px;
+//   }
+//   aside{
+//     margin-top: 60px;
+//   }
+//   .post-info{
+//     margin-bottom: 30px;
+//   }
+//   .post-date{
+//     width: 70px;
+//     height: 70px;
+//     font-size: 1rem;
+//   }
+//   .post-date span{
+//     font-size: 0.875rem;
+//     padding-top: 2px;
+//   }
+//   .post-title{
+//     font-size: 1.375rem;
+//   }
+//   .post-cat{
+//     font-size: 0.875rem;
+//     margin-top: 10px;
+//   }
+//   .post-title,
+//   .post-cat{
+//     margin-left: 80px;
+//   }
+//   .menu-content{
+//     margin-top: 20px;
+//   }
+//   /* contact--------------- */
+//   #contact .page-title{
+//     margin-top: 40px;
+//   }
+//   input[type="text"],
+//   input[type="email"],
+//   textarea{
+//     max-width: 100%;
+//   }
+// }
