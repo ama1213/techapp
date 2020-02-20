@@ -1,4 +1,26 @@
 $(function(){
+  var reloadMessages = function() {
+    last_message_id = $('.message:last').data("message-id");
+    $.ajax({
+      url: "api/messages",
+      type: 'get',
+      dataType: 'json',
+      data: {id: last_message_id}
+    })
+    .done(function(messages) {
+      if (messages.length !== 0) {
+        var insertHTML = '';
+        $.each(messages, function(i, message) {
+          insertHTML += buildHTML(message)
+        });
+        $('.messages').append(insertHTML);
+        $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
+      }
+    })
+    .fail(function() {
+      console.log('error');
+    });
+  };
 
   var buildHTML = function(message) {
     if (message.content && message.image) {
@@ -52,26 +74,26 @@ $(function(){
     return html;
   };
 
-$('#new_message').on('submit', function(e){
+  $('#new_message').on('submit', function(e){
   
-  e.preventDefault();
-  var formData = new FormData(this);
-  var url = $(this).attr('action')
-  $.ajax({
-    url: url,
-    type: "POST",
-    data: formData,
-    dataType: 'json',
-    processData: false,
-    contentType: false
-  })
-   .done(function(data){
-     var html = buildHTML(data);
-     $('.chat-main__message').append(html);
-     $('.chat-main__message').animate({scrollTop: $('.chat-main__message')[0].scrollHeight}, 'fast');   
-     $('form')[0].reset();
-     $('.chat-main__form__submit').prop('disabled', false)
-   })
+    e.preventDefault();
+    var formData = new FormData(this);
+    var url = $(this).attr('action')
+    $.ajax({
+      url: url,
+      type: "POST",
+      data: formData,
+      dataType: 'json',
+      processData: false,
+      contentType: false
+    })
+    .done(function(data){
+      var html = buildHTML(data);
+      $('.chat-main__message').append(html);
+      $('.chat-main__message').animate({scrollTop: $('.chat-main__message')[0].scrollHeight}, 'fast');   
+      $('form')[0].reset();
+      $('.chat-main__form__submit').prop('disabled', false)
+    })
     .fail(function(){
       alert('error');
     });
@@ -99,5 +121,5 @@ $('#new_message').on('submit', function(e){
       });
     };
   }
-    setInterval(reloadMessages, 7000);
+  setInterval(reloadMessages, 7000);
 });
